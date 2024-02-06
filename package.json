@@ -4,12 +4,43 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx src/index.ts --watch"
+    "dev": "tsx src/index.ts --watch",
+    "copy-env": "cp .env.example .env",
+    "eslint": "eslint '**/*.{ts,tsx}' --fix"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "bip32": "^4.0.0",
     "bitcoinjs-lib": "^6.1.5",
+    "dotenv-safe": "^8.2.0",
     "ecpair": "^2.1.0",
+    "eslint": "^8.0.1",
+    "isomorphic-fetch": "^3.0.0",
+    "kcors": "^2.2.2",
+    "koa": "^2.15.0",
+    "koa-bodyparser": "^4.4.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^12.0.1",
+    "moongose": "^1.0.0",
+    "tiny-secp256k1": "^2.2.3",
     "tsx": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/bitcoinjs-lib": "^5.0.0",
+    "@types/dotenv-safe": "^8.1.5",
+    "@types/kcors": "^2.2.8",
+    "@types/koa": "^2.14.0",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/koa-logger": "^3.1.5",
+    "@types/koa-router": "^7.4.8",
+    "@types/node": "^20.11.16",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "*"
   }
 }
