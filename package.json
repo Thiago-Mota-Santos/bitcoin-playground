@@ -1,0 +1,15 @@
+{
+  "name": "bitcoin-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx src/index.ts --watch"
+  },
+  "dependencies": {
+    "bip32": "^4.0.0",
+    "bitcoinjs-lib": "^6.1.5",
+    "ecpair": "^2.1.0",
+    "tsx": "^4.7.0"
+  }
+}
