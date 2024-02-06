@@ -1,16 +1,15 @@
-import { Transaction } from "bitcoinjs-lib/src/transaction";
-import * as bitcoin from "bitcoinjs-lib"
-import * as ecc from 'tiny-secp256k1';
-import ECPairFactory from 'ecpair';
-import { debugConsole } from "./utils/debugConsole";
+import "isomorphic-fetch";
+import { createServer } from "http";
+import app from "./app";
+import { connectDatabase } from "./mongo";
+import { config } from "./config";
 
+(async () => {
+  await connectDatabase();
 
-// generating a Bitcoin Address
+  const server = createServer(app.callback());
 
-const ECPair = ECPairFactory(ecc);
-const TESTNET = bitcoin.networks.testnet;
-
-const key  = ECPair.makeRandom()
-
-const { address } = bitcoin.payments.p2pkh({ pubkey: key.publicKey })
-console.log("endereço : " + address)
+  server.listen(config.PORT, () => {
+    console.log(`server running at http://localhost:${config.PORT}`);
+  });
+})();
