@@ -1,7 +1,9 @@
 import * as bitcoin from 'bitcoinjs-lib'
 
-import { regtest } from "bitcoinjs-lib/src/networks";
 import { ECPair } from "./ECPair";
+import { regtestUtils } from './regtest';
+
+const regtest = regtestUtils.network
 
 export const createPayment = (_type: string, myKeys?: any[], network?: any): any => {
     network = network || regtest;
