@@ -15,6 +15,7 @@ export const config = {
   NODE_ENV: process.env.NODE_ENV,
   MONGO_URI: process.env.MONGO_URI,
   JWT_SECRET: process.env.JWT_SECRET,
-  BASE_URL: process.env.BASE_URL
+  API_ID: process.env.API_ID,
+  API_SECRET: process.env.API_SECRET,
 }
 
